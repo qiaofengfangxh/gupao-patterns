@@ -21,15 +21,23 @@ package com.gupao.study.patterns.factory.abstractfactory;
 public class AbstractFactoryTest {
 
 
+
     public static void main(String[] args) {
 
         ICourseFactory factory = new JavaCourseFactory();
-        factory.createHomeWork().create();
-        factory.createVideo().create();
+        IHomeWork homeWork = factory.createHomeWork();
+        //生产java作业
+        homeWork.create();
+
+        IVideo video = factory.createVideo();
+        //生产java视频
+        video.create();
 
 
         factory = new PhpCourseFactory();
+        //生产php作业
         factory.createHomeWork().create();
+        //生产php视频
         factory.createVideo().create();
     }
 
