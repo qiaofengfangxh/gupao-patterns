@@ -6,22 +6,25 @@ public class Test {
 
         //1：先生产一个蛋糕出来
         ICakeService cake = new CakeA();
-        cake.createCake();
+        //cake.createCake();
 
         //2：给蛋糕增加水果
-        Decorator decorator = new FruitDecorator(cake);
+        Decorator fruitDecorator = new FruitDecorator(cake);
+        //decorator.createCake();
 
 
-        //3：给蛋糕增加面包
-        decorator = new BreadDecorator(decorator);
+        //Decorator breadDecorator = new BreadDecorator(cake);
+        //breadDecorator.createCake();
 
 
+        Decorator breadAndFruitDecorator = new BreadDecorator(fruitDecorator);
+       // Decorator breadAndFruitDecorator2 = new BreadDecorator(breadAndFruitDecorator);
+        breadAndFruitDecorator.createCake();
 
-        decorator.createCake();
 
     }
 
 
-}
+            }
 
 

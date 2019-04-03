@@ -5,7 +5,7 @@ package com.gupao.study.patterns.decorator;
  */
 public abstract class Decorator implements ICakeService {
 
-    private ICakeService cakeService;
+    protected ICakeService cakeService;
 
     Decorator(ICakeService cakeService) {
         this.cakeService = cakeService;
