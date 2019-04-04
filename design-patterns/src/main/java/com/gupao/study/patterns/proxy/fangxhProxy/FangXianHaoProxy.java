@@ -21,7 +21,7 @@ public class FangXianHaoProxy {
             System.out.println(src);
             //把生成的字节码输出到文件
             String filePath = FangXianHaoProxy.class.getResource("").getPath();
-            System.out.println(filePath);
+            //System.out.println(filePath);
             File f = new File(filePath + "$Proxy0.java");
             FileWriter fw = new FileWriter(f);
             fw.write(src);
